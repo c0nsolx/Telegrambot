@@ -6,7 +6,7 @@ bot = telebot.TeleBot('5139247544:AAGdZ9VJANQOJhLJbhN7Z2-2Lis5DSnnaE8')
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    mess = f'Hello {message.from_user.first_name} {message.from_user.last_name}, This is a telegram bot, through which you can find the logos of some German cars, pictures of cars and information about the brands of those cars.'
+    mess = f'Hello {message.from_user.first_name} {message.from_user.last_name}, This is a telegram bot, through which you can find the logos of some German cars, pictures of cars and information about the brands of those cars. use /help command to get some information how to use bot'
     bot.send_message(message.chat.id, mess, parse_mode='html')
 
 
@@ -31,7 +31,7 @@ def get_user_text(message):
         mess = 'Bmw photo'
         bot.send_message(message.chat.id, mess, parse_mode='html')
 
-    if message.text == "Bmw exhaust sound":
+    if message.text == "Bmw sound":
         exhaust_sound = open('Audio files/Bmw.mp3', 'rb')
         bot.send_voice(message.chat.id, exhaust_sound)
         mess = 'random exhaust sound'
@@ -61,7 +61,7 @@ def get_user_text(message):
         mess = 'Mercedes photo'
         bot.send_message(message.chat.id, mess, parse_mode='html')
 
-    if message.text == "Mercedes exhaust sound":
+    if message.text == "Mercedes sound":
         exhaust_sound = open('Audio files/Mercedes.mp3', 'rb')
         bot.send_voice(message.chat.id, exhaust_sound)
         mess = 'random exhaust sound'
@@ -92,7 +92,7 @@ def get_user_text(message):
         mess = 'Audi photo'
         bot.send_message(message.chat.id, mess, parse_mode='html')
 
-    if message.text == "Audi exhaust sound":
+    if message.text == "Audi sound":
         exhaust_sound = open('Audio files/Audi.mp3', 'rb')
         bot.send_voice(message.chat.id, exhaust_sound)
         mess = 'random exhaust sound'
@@ -123,7 +123,7 @@ def get_user_text(message):
         mess = 'Porsche photo'
         bot.send_message(message.chat.id, mess, parse_mode='html')
 
-    if message.text == "Porsche exhaust sound":
+    if message.text == "Porsche sound":
         exhaust_sound = open('Audio files/Porsche.mp3', 'rb')
         bot.send_voice(message.chat.id, exhaust_sound)
         mess = 'random exhaust sound'
